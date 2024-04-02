@@ -17,7 +17,11 @@ class ProductSeeder extends Seeder
        foreach ($products as $product) {
         $new_product = new Product();
         $new_product->title = $product['title'];
-        dd($new_product);
+        $new_product->image =$product['image'];
+        $new_product->description =$product['description'];
+        $new_product->price = $product['price'];
+        $new_product->avaiable =$product['avaiable'];
+        $new_product->save();
        }
     }
 }
