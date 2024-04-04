@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('image');
             $table->text('description');
             $table->float('price');
-            $table->boolean('avaiable');
+            $table->boolean('available');
             $table->timestamps();
         });
     }

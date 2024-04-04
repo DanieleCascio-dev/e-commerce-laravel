@@ -20,7 +20,7 @@ class ProductSeeder extends Seeder
         $new_product->image =$product['image'];
         $new_product->description =$product['description'];
         $new_product->price = $product['price'];
-        $new_product->avaiable =$product['avaiable'];
+        $new_product->available =$product['available'];
         $new_product->save();
        }
     }
