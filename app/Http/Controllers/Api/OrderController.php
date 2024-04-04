@@ -11,6 +11,15 @@ class OrderController extends Controller
 {
 
     public function index(){
+        $ordersQuery = Order::with('products');
+        $orders = $ordersQuery->paginate(10);
+        
+
+        return response()->json([
+            'success'=>true,
+            'results'=>$orders,
+            
+        ]);
 
     }
 
