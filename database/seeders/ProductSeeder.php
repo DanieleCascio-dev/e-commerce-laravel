@@ -13,6 +13,7 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
+        //use the products.php in config folder to seed DB
         $products= config('products');
        foreach ($products as $product) {
         $new_product = new Product();

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-
+    //Retrun all orders with pivot table
     public function index(){
         $ordersQuery = Order::with('products');
         $orders = $ordersQuery->paginate(10);
@@ -23,6 +23,7 @@ class OrderController extends Controller
 
     }
 
+    // Save new order and save info into pivot table
     public function storeOrder(Request $request){
         $data = $request->all();
 

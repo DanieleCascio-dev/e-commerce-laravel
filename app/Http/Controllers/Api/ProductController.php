@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    // return all product with a pagination
     public function index(){
         $products = Product::paginate(5);
         return response()->json([
@@ -16,6 +17,7 @@ class ProductController extends Controller
         ]);
     }
 
+    // return a single product using id 
     public function show($id){
         $product= Product::where('id',$id)->first();
         return response()->json([
