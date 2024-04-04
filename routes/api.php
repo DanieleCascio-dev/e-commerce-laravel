@@ -24,5 +24,5 @@ Route::get('/products',[ProductController::class, 'index']);
 Route::get('/products/{id}',[ProductController::class, 'show']);
 
 Route::get('/orders',[OrderController::class,'index']);
-Route::post('/order/{request}',[OrderController::class,'storeOrder']);
+Route::post('/order',[OrderController::class,'storeOrder']);
 
